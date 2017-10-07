@@ -4,7 +4,7 @@ const User = require('../models/user')
 const moment = require('moment');
 
 //authenticate requests from ajax
-router.post('/bz',(req,res,next) => {
+router.post('/auth',(req,res,next) => {
 	const user = {
 		username: req.body.username,
 		password: req.body.password
