@@ -1,0 +1,247 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 300;
+  font-style: normal;
+}
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul, li, h1, h1,h2,h3,h4 {
+  list-style: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+h4 {
+  display: inline-block;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+select::-ms-expand { /* for IE 11 */
+    display: none;
+}
+a {
+  color: white;
+}
+*::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.5);
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: rgba(255,255,255,0.6);
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: rgba(255,255,255,0.6);
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(255,255,255,0.6);
+}
+input:focus::-webkit-input-placeholder {
+    opacity: 0.5;
+}
+input:focus:-moz-placeholder {
+    opacity: 0.5;
+}
+input:focus::-moz-placeholder {
+    opacity: 0.5;
+}
+input:focus:-ms-input-placeholder {
+    opacity: 0.5;
+}
+.wrapper,
+.row {
+  *zoom: 1;
+}
+.wrapper:before,
+.row:before, .wrapper:after,
+.row:after {
+  content: " ";
+  display: table;
+}
+.wrapper:after,
+.row:after {
+  clear: both;
+}
+.wrapper,.platform {
+  margin: 50px auto;
+}
+.wrapper {
+  width:330px;
+}
+.platform {
+  width: 450px;
+}
+.plati {
+  height: 600px !important;
+}
+.row > [class*='column-']:first-child {
+  margin-left: 0;
+}
+.row > [class*='column-']:last-child {
+  margin-right: 0;
+}
+.row > [class*='column-'] {
+  margin: 0 1%;
+}
+[class*="column-"] {
+  position: relative;
+  float: left;
+  min-height: 1px;
+}
+[class*="column-"].wd {
+  border-radius: 4px;
+  height: auto;
+}
+[class*="column-"].bck {
+  background: rgba(255,255,255,0.025);
+} 
+.plat {
+  height: 400px !important;
+}
+
+.column-1 {
+  width: 6.5%;
+}
+.column-2 {
+  width: 15%;
+}
+.column-3 {
+  width: 23.5%;
+}
+.column-4 {
+  width: 32%;
+}
+.column-5 {
+  width: 40.5%;
+}
+.column-6 {
+  width: 49%;
+}
+.column-7 {
+  width: 57.5%;
+}
+.column-8 {
+  width: 66%;
+}
+.column-9 {
+  width: 74.5%;
+}
+.column-10 {
+  width: 83%;
+}
+.column-11 {
+  width: 91.5%;
+}
+.column-12 {
+  width: 100%;
+}
+.resp-img {
+  display: block;
+  width: 100%;
+  height:auto;
+}
+.err-stack {
+  word-break: break-all;
+}
+.mkbl {
+  color: #45aeff;
+}
+.mkg {
+  color: #2cc17b;
+}
+.err-stack p{
+  line-height: 25px;
+  font-size: 14px;
+}
+body {
+  background: #0a0a0a;
+  font-family: 'Raleway';
+  color: white;
+}
+input,button{
+  height: 40px;
+  font-family: 'Raleway',sans-serif;
+  width:100%;
+  letter-spacing: 1px;
+  outline: none;
+  font-size: 14px;
+}
+input[type="text"].lg,textarea.lg,input[type="password"].lg,button{
+  color: white;
+  border: none;
+  background:rgba(255,255,255,0.05);
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+}
+textarea.lg {
+  min-height: 80px;
+  max-height: 100px;
+  resize: vertical;
+  font-size: 14px;
+  outline: none;
+  font-family: 'Raleway',sans-serif;
+}
+input[type="text"].lg,input[type="password"].lg,input[type="text"].lg.lg-mg,input[type="password"].lg.lg-mg {
+  margin-bottom: 10px;
+}
+/* buttons */
+.lg-btn {
+  border:none;
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  color: white;
+}
+.lg-btn.grn {
+  background: linear-gradient(150deg,#2cc17b,#2B2B2B);
+}
+.lg-btn.blue {
+  background: linear-gradient(150deg,#45aeff,#2B2B2B);
+}
+.lg-btn.rd {
+  background: linear-gradient(150deg,#9C0000,#2B2B2B);
+}
+
+input[type="submit"].lg-btn:active,button:active {
+  opacity: 0.7;
+}
+.fields {
+  padding: 20px 0px;
+}
+.fields h3 {
+  display: block;
+  text-align: center;
+  font-size: 17px;
+}
+.red {
+  color: #ff0606;
+}

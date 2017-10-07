@@ -1,0 +1,131 @@
+@font-face {
+	font-family: 'Raleway';
+	src: url('../css/RisingSun-Light.otf') format('opentype');
+}
+
+.cont {
+	padding: 30px;
+}
+.cont-sw {
+	padding: 20px;
+}
+.cont-s {
+	padding: 30px 20px;
+}
+.center {
+	text-align: center !important;
+}
+.ready {
+	font-size:30px;
+}
+.ready-sub,.ready {
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.home-stage {
+	text-align: center;
+	font-size:65px;
+	font-weight: bold;
+    background: -webkit-linear-gradient(#45aeff, #2cc17b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	margin-bottom: 10px;
+}
+.tolink {
+  text-decoration: none;
+  cursor: pointer;
+}
+.tolink:active {
+	opacity:0.7 !important;
+}
+.warning {
+	border: 1px solid white !important;
+}
+.mkr {
+	display: block;
+	text-align: center;
+	color:#f33846;
+	padding-top: 20px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.checks {
+	margin-top: 20px;
+}
+.checks p {
+	text-align: center;
+	font-size: 14px;
+}
+.lg.search {
+	text-align: center;
+}
+input:disabled {
+	opacity:0.7;
+}
+.tab {
+	min-height: 80px;
+	cursor: pointer;
+}
+.tab:active {
+	opacity: 0.5;
+}
+.tab-title {
+	display: block;
+	font-size: 25px;
+	border-bottom: 1px solid rgba(255,255,255,0.35);
+	width: 100%;
+	padding: 10px;
+	opacity:0.55;
+}
+.tab-item span {
+	opacity: 0.6;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+}
+.center.red {
+	opacity:1 !important;
+}
+.tab-item span:active {
+	opacity: 0.5;
+}
+.tab-item a {
+	text-decoration: none;
+}
+#tab-item {
+	position: absolute;
+	bottom:10px;
+}
+.icon {
+	height: 55px;
+	width: 100%;
+	text-align: center;
+	opacity: 0.5;
+}
+.icon:hover{
+	fill:red;
+}
+.icon,.icon-title {
+	display: block;
+}
+.icon.search {
+	background: url(../img/search.svg) no-repeat;
+	background-size: 30px 30px;
+	background-position: center center;
+}
+.icon.messages {
+	background: url(../img/messages.svg) no-repeat;
+	background-size: 30px 30px;
+	background-position: center center;
+}
+.icon.addlist {
+	background: url(../img/add.svg) no-repeat;
+	background-size: 30px 30px;
+	background-position: center center;
+}
+.icon-title {
+	text-align: center;
+	font-size: 13px;
+}

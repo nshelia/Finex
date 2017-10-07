@@ -1,0 +1,15 @@
+extends layout
+block content
+	body
+		.wrapper
+			.row
+				.column-12.wd.bck
+					.cont-s
+						form(action="/")
+							h4.ready.mkbl Your account is ready
+							h4.ready-sub #{firstname}, are you ready too ?
+							input(type="submit" value="Go into account" class="lg-btn grn")
+	block content
+	include scripts							
+			
+										
