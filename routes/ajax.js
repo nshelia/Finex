@@ -58,10 +58,9 @@ router.post('/accounts',(req,res,next) => {
 		    error.err_message = "Account can't be created";
 		    return res.json(error);
 		}
-	  	req.session.firstname = user.firstname; // for success route
-		req.session.success = true;
+	  	req.session.user = user; // for success route
 		req.session.toaccount = true;
-		res.json({"redirect":true,"redirect_url": "/success"});
+		res.json({"redirect":true,"redirect_url": "/"});
 	});
 })
 

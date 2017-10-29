@@ -33,7 +33,6 @@ module.exports =  function ajax_bz(w,url) {
 						error(`${res.err_message}`);
 					}
 					if (res.redirect) {
-						w.find(':submit').val('Redirecting...');
 						window.location.href = res.redirect_url;
 					}
 					w.find(':submit').removeAttr('disabled')

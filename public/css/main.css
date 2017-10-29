@@ -8,6 +8,11 @@ ol {
   font-weight: 300;
   font-style: normal;
 }
+body {
+  background: #0a0a0a;
+  font-family: 'Raleway';
+  color: white;
+}
 *,
 *:after,
 *:before {
@@ -24,6 +29,28 @@ ul, li, h1, h1,h2,h3,h4 {
 }
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+input[type="submit"].lg-btn:active,button:active {
+  opacity: 0.7;
+}
+input,button{
+  height: 40px;
+  font-family: 'Raleway',sans-serif;
+  width:100%;
+  letter-spacing: 1px;
+  outline: none;
+  font-size: 14px;
+}
+input[type="text"].lg,textarea.lg,input[type="password"].lg,button{
+  color: white;
+  border: none;
+  background:rgba(255,255,255,0.05);
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+}
+input[type="text"].lg,input[type="password"].lg,input[type="text"].lg.lg-mg,input[type="password"].lg.lg-mg {
+  margin-bottom: 10px;
 }
 h4 {
   display: inline-block;
@@ -93,13 +120,10 @@ input:focus:-ms-input-placeholder {
   margin: 50px auto;
 }
 .wrapper {
-  width:330px;
+  width:320px;
 }
 .platform {
-  width: 450px;
-}
-.plati {
-  height: 600px !important;
+  width: 550px;
 }
 .row > [class*='column-']:first-child {
   margin-left: 0;
@@ -122,10 +146,6 @@ input:focus:-ms-input-placeholder {
 [class*="column-"].bck {
   background: rgba(255,255,255,0.025);
 } 
-.plat {
-  height: 400px !important;
-}
-
 .column-1 {
   width: 6.5%;
 }
@@ -180,39 +200,6 @@ input:focus:-ms-input-placeholder {
   line-height: 25px;
   font-size: 14px;
 }
-body {
-  background: #0a0a0a;
-  font-family: 'Raleway';
-  color: white;
-}
-input,button{
-  height: 40px;
-  font-family: 'Raleway',sans-serif;
-  width:100%;
-  letter-spacing: 1px;
-  outline: none;
-  font-size: 14px;
-}
-input[type="text"].lg,textarea.lg,input[type="password"].lg,button{
-  color: white;
-  border: none;
-  background:rgba(255,255,255,0.05);
-  border-radius: 4px;
-  padding: 10px;
-  width: 100%;
-}
-textarea.lg {
-  min-height: 80px;
-  max-height: 100px;
-  resize: vertical;
-  font-size: 14px;
-  outline: none;
-  font-family: 'Raleway',sans-serif;
-}
-input[type="text"].lg,input[type="password"].lg,input[type="text"].lg.lg-mg,input[type="password"].lg.lg-mg {
-  margin-bottom: 10px;
-}
-/* buttons */
 .lg-btn {
   border:none;
   background: rgba(255,255,255,0.05);
@@ -229,19 +216,4 @@ input[type="text"].lg,input[type="password"].lg,input[type="text"].lg.lg-mg,inpu
 }
 .lg-btn.rd {
   background: linear-gradient(150deg,#9C0000,#2B2B2B);
-}
-
-input[type="submit"].lg-btn:active,button:active {
-  opacity: 0.7;
-}
-.fields {
-  padding: 20px 0px;
-}
-.fields h3 {
-  display: block;
-  text-align: center;
-  font-size: 17px;
-}
-.red {
-  color: #ff0606;
 }

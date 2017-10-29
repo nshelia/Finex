@@ -9910,7 +9910,7 @@ var ajax_bz = __webpack_require__(3);
 var sn = $('.dse');
 var li = $('.dsc');
 ajax_bz(sn, '/ajax/accounts');
-ajax_bz(li, '/ajax/bz');
+ajax_bz(li, '/ajax/auth');
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -9984,7 +9984,6 @@ module.exports = function ajax_bz(w, url) {
 						error('' + res.err_message);
 					}
 					if (res.redirect) {
-						w.find(':submit').val('Redirecting...');
 						window.location.href = res.redirect_url;
 					}
 					w.find(':submit').removeAttr('disabled');
