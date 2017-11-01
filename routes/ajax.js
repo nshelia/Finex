@@ -31,7 +31,7 @@ router.post('/accounts',(req,res,next) => {
 		lastname: req.body.lastname,
 		username: req.body.username,
 		password: req.body.password,
-		created_at: moment(Date.now()).format(`YYYY-MM-DD-mm-ss`)
+		created_at: moment().format('MMMM Do YYYY, h:mm:ss a')
 	})
 	if (user.firstname.length > 0) {
 		user.firstname = capitalize_first_letter(user.firstname);

@@ -4,7 +4,7 @@ const User = require('../models/user')
 
 router.get('/favicon.ico', function(req, res) {
     res.sendStatus(204);
-}); // force favicon loading
+});
 
 router.get('/',(req,res,next) => {
 	if (req.session.toaccount) {
