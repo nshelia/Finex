@@ -1,10 +1,10 @@
 {
-  "name": "findme",
+  "name": "finex",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node server.js",
     "webpack": "webpack"
   },
   "keywords": [],

@@ -1,4 +1,4 @@
-var li = $('.dsc');
+var li = $('.dsc')
 function ajax_bz(w, url) {
 	w.submit(function (e) {
 		var errors = 0;
@@ -23,6 +23,7 @@ function ajax_bz(w, url) {
 			error('All field is required');
 		} else {
 			w.find(':submit').attr('disabled', 'disabled');
+			console.log(w.find(':submit'))
 			e.preventDefault();
 			$.ajax({
 				url: url,

@@ -116,14 +116,14 @@ input:focus:-ms-input-placeholder {
 .row:after {
   clear: both;
 }
-.wrapper,.platform {
+.wrapper,#platform {
   margin: 50px auto;
 }
 .wrapper {
   width:320px;
 }
-.platform {
-  width: 550px;
+#platform {
+  width: 450px;
 }
 .row > [class*='column-']:first-child {
   margin-left: 0;
