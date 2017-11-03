@@ -18,6 +18,7 @@ router.post('/auth',(req,res,next) => {
 			res.json(error);
 		} else {
 			req.session.toaccount = true;
+			req.session.user = user;
 			res.json({"redirect":true,"redirect_url": "/"});
 		}
 	})
@@ -63,6 +64,5 @@ router.post('/accounts',(req,res,next) => {
 		res.json({"redirect":true,"redirect_url": "/"});
 	});
 })
-
 
 module.exports = router;

@@ -7,6 +7,7 @@ userSchema = new Schema({
 	username: {type:String,required:true,unique:true,trim:true},
 	password: {type:String,required:true},
 	firsttime: {type:Boolean,required:true,default: true},
+	todos: {type:Array,default: []},
 	created_at: {type:String,required:true}
 });
 userSchema.statics.authenticate = (username,password,callback) => {

@@ -63,3 +63,53 @@
 input:disabled {
 	opacity:0.7;
 }
+.todo:last-child {
+	margin-bottom: 0px;
+}
+.todo {
+	position: relative;
+	padding: 1rem 1rem 0.5rem 1rem;
+	margin-bottom: 10px;
+}
+.todo .todo-delete {
+	position: absolute;
+	height: 12px;
+	width: 12px;
+	background: url('cross.svg') no-repeat;
+	background-size: 12px 12px;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+.todo-delete:active {
+	opacity: 0.5;
+}
+.todo .todo-text {
+	display: block;
+	font-size: 18px;
+}
+.todo .todo-time {
+	display: block;
+	opacity: 0.8;
+	margin-top: 15px;
+	font-size: 12px;
+}
+.message {
+	font-size: 22px;
+	display: block;
+}
+.add-form {
+	border-bottom: 1px solid #333;
+}
+.todo-list {
+	display: inline-block;
+	width: 100%;
+}
+.profile-tool {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.profile-tool a {
+	margin-left: 5px;
+	color: #333;
+}

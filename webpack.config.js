@@ -12,7 +12,7 @@ module.exports = {
 		filename: '[name].bundle.min.js'
 	},
     resolve: {
-        modules: [path.resolve(__dirname, "./app/components"), "node_modules"],
+        modules: [path.resolve(__dirname, "./app/components"),path.resolve(__dirname,"./app/api"), "node_modules"],
         extensions: ['.js', '.jsx']
     },
  	module: {
@@ -24,7 +24,11 @@ module.exports = {
                 	presets: ['es2015','react']
             	},
                 exclude: /(node_modules|bower_components)/
-         	}
+         	},
+            {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader?limit=10000'
+            }
      	]	
  	},
     plugins: [

@@ -5,8 +5,8 @@ block content
 			.row
 				.column-12
 					h3.home-stage.noselect finex
-			.row
-				.column-12.wd.bck.cont
-					a.mkbl(href="/logout") Logout
+					span.profile-tool #{user.firstname} -
+						a(href="/logout") Logout
+			#app
 	script(src="/dist/app/vendor.bundle.min.js")
 	script(src="/dist/app/app.bundle.min.js")
