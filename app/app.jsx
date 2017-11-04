@@ -19,29 +19,31 @@ var App = createClass({
 		var todo = {
 			id: uuid(),
 			text: text,
-			createdAt: moment().format()
+			createdAt: moment().format(),
+			completed: false,
+			completedAt: undefined
 		}
 		TodoAPI.addTodo(todo).then(() => {
-			this.loadTodos();
+			this.loadTodos(false);
 		});
 	},
-	loadTodos: function() {
-		TodoAPI.loadTodos().then((response) => {
+	loadTodos: function(completed) {
+		TodoAPI.loadTodos(completed).then((response) => {
 			this.setState({
 				todos: response.data
 			})
 		})
 	},
 	componentDidMount: function() {
-		this.loadTodos();
+		this.loadTodos(false);
 	},
 	render: function() {
 		var {todos} = this.state;
 		return (
 			<div className="row">
 				<div className="column-12 wd bck">
-					<AddTodo addTodo={this.handleTodo}/>
-					<TodoList todos={todos} update={() => this.loadTodos()}/>	
+					<AddTodo addTodo={this.handleTodo} update={(checked) => this.loadTodos(checked)}/>
+					<TodoList todos={todos} update={(completed) => this.loadTodos(completed)}/>	
 				</div>
 			</div>
 		)

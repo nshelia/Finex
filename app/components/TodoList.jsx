@@ -5,8 +5,8 @@ var Todo = require('Todo')
 var axios = require('axios');
 var TodoList = createClass({
 	displayName: 'TodoList',
-	loadTodos: function() {
-		this.props.update();
+	loadTodos: function(completed) {
+		this.props.update(completed);
 	},
 	render: function() {
 		var renderTodos = () =>{
@@ -17,9 +17,13 @@ var TodoList = createClass({
 				return <span className="message center">Your todo list is empty</span>
 			}
 			return todos.map((todo) =>  {
-				return <Todo key={todo.id} {...todo} onDelete={() => { 
+				return <Todo key={todo.id} {...todo} onComplete={() => {
+					TodoAPI.updateTodo(todo.id).then(() => {
+						this.loadTodos(false);
+					})
+				}} onDelete={() => { 
 						TodoAPI.deleteTodo(todo.id).then(() => {
-							this.loadTodos();
+							this.loadTodos(false);
 						})
 					} 
 				}/>

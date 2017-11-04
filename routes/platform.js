@@ -15,10 +15,13 @@ router.post('/todos',(req,res,next) => {
 })  
 router.post('/todo-list',(req,res,next) => {
 	var client = req.body.client;
+	var filtered = req.body.filtered;
 	if (client === 'user-data') {
 		var promise = User.findOne({username:req.session.user.username}).exec();
 		promise.then((user) => {
-			res.json(user.todos);
+			var array = user.todos;
+			array = array.filter((todo) => todo.completed === filtered)
+			res.json(array)
 		})
 	}
 }) 
@@ -28,6 +31,15 @@ router.post('/delete',(req,res,next) => {
 		var promise = User.update({username: req.session.user.username},{$pull: {todos: {id: uid}}}).exec();
 		promise.then((user) => {
 			res.json(true);
+		})
+	}
+}) 
+router.post('/update',(req,res,next) => {
+	var uid = req.body.id;
+	if (uid) {
+		var promise = User.update({username: req.session.user.username,'todos.id': uid},{'$set': {'todos.$.completed': true,'todos.$.completedAt': req.body.completedAt}}).exec();
+		promise.then((user) => {
+			res.end('updated');
 		})
 	}
 }) 
