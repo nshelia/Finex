@@ -21,16 +21,16 @@ var App = createClass({
 			text: text,
 			createdAt: moment().format()
 		}
-		TodoAPI.addTodo(todo);
-		this.loadTodos();
+		TodoAPI.addTodo(todo).then(() => {
+			this.loadTodos();
+		});
 	},
 	loadTodos: function() {
-		axios.post('/todo-list',{client: 'user-data'})
-			.then((response) => {
-				this.setState({
-					todos: response.data
-				})
+		TodoAPI.loadTodos().then((response) => {
+			this.setState({
+				todos: response.data
 			})
+		})
 	},
 	componentDidMount: function() {
 		this.loadTodos();

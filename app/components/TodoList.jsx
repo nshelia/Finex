@@ -8,9 +8,6 @@ var TodoList = createClass({
 	loadTodos: function() {
 		this.props.update();
 	},
-	componentWillReiceveProps: function() {
-		this.props.update();
-	},
 	render: function() {
 		var renderTodos = () =>{
 			var {todos} = this.props;
@@ -21,8 +18,7 @@ var TodoList = createClass({
 			}
 			return todos.map((todo) =>  {
 				return <Todo key={todo.id} {...todo} onDelete={() => { 
-						axios.post('/delete',{id: todo.id})
-						.then((response) => {
+						TodoAPI.deleteTodo(todo.id).then(() => {
 							this.loadTodos();
 						})
 					} 
