@@ -1,12 +1,13 @@
-extends layout
-block content
-	body
-		#platform
-			.row
-				.column-12
-					h3.home-stage.noselect finex
-					span.profile-tool #{user.firstname} -
-						a(href="/logout") Logout
-			#app
-	script(src="/dist/app/vendor.bundle.min.js")
-	script(src="/dist/app/app.bundle.min.js")
+head
+	link(rel='stylesheet' type='text/css' href='../css/main.css')
+head
+body
+	.wrapper
+		.row
+			.column-12
+				h3.home-stage.noselect finex
+				span.profile-tool #{user.firstname} -
+					a(href="/logout") Logout
+		#app
+script(src="/dist/app/vendor.bundle.min.js")
+script(src="/dist/app/app.bundle.min.js")

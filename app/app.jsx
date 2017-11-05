@@ -8,7 +8,6 @@ var TodoAPI = require('TodoAPI')
 var AddTodo = require('AddTodo');
 var TodoList = require('TodoList');
 
-require('./styles/app.scss');
 require('./styles/todo.scss');
 
 var App = createClass({
