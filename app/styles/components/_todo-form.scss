@@ -1,0 +1,18 @@
+.message {
+	font-size: $big-font-size;
+	display: block;
+}
+.add-form {
+	border-bottom: 1px solid #333;
+}
+label  {
+	display: block;
+	padding:1rem 0rem;
+}
+label input[type=checkbox] {
+	width: 15px;
+	height: 15px;
+}
+label span {
+	margin-left: 5px;
+}

@@ -1,0 +1,30 @@
+@import 'mixins';
+@import 'variables';
+
+.noselect {
+  @include noselect()
+}
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+select::-ms-expand { /* for IE 11 */
+    display: none;
+}
+.err-stack {
+  word-break: break-all;
+}
+.mkbl {
+  color: $blue;
+}
+.mkg {
+  color: $green;
+}
+.err-stack p{
+  line-height: 25px;
+  font-size: $normal-font-size;
+}
+.center {
+  text-align: center !important;
+}

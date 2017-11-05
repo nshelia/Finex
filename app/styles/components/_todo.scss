@@ -1,0 +1,58 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.todo-list {
+	display: inline-block;
+	width: 100%;
+}
+.todo {
+	position: relative;
+	padding: $todo-padding;
+	margin-bottom: 10px;
+}
+.todo-complete,.todo-delete {
+	position: absolute;
+	height: $icon-size;
+	width: $icon-size;
+	cursor: pointer;
+}
+.todo {
+	.todo-complete {
+		background: url('../img/tick.svg') no-repeat;
+		background-size: $icon-size $icon-size;
+		right: 10px;
+		bottom: 10px;
+	}
+	.todo-delete {
+		background: url('../img/cross.svg') no-repeat;
+		background-size: $icon-size $icon-size;
+		top: 10px;
+		right: 10px;
+	}
+	.todo-text {
+		display: block;
+		word-wrap: break-word;
+		padding-right: $medium-font-size;
+		font-size: $medium-font-size;
+	}
+	.todo-time {
+		display: block;
+		opacity: 0.8;
+		margin-top: 15px;
+		font-size: $small-font-size;
+	}
+}
+.todo.completed {
+	background: $background-color;
+	@include border-radius(3px);
+}
+.todo-delete:active,.todo-complete:active {
+	opacity: 0.5;
+}
+.todo:last-child {
+	margin-bottom: 0px;
+}
+
+
+
+

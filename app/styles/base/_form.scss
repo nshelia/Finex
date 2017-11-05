@@ -1,0 +1,51 @@
+
+@import 'variables';
+@import 'mixins';
+
+input,button{
+  height: 40px;
+  font-family: $font-family;
+  width:100%;
+  letter-spacing: 1px;
+  outline: none;
+  font-size: $normal-font-size;
+}
+input:disabled {
+  opacity:0.7;
+}
+.solid {
+  color: white;
+  border:none;
+}
+input[type="text"].lg,textarea.lg,input[type="password"].lg,button{
+  @extend .solid;
+  background:$input-color;
+  @include border-radius($border-radius)
+  padding: 10px;
+  width: 100%;
+}
+input[type="text"].lg,input[type="password"].lg,input[type="text"].lg.lg-mg,input[type="password"].lg.lg-mg {
+  margin-bottom: 10px;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="submit"].lg-btn:active,button:active {
+  opacity: 0.7;
+}
+.lg-btn {
+  @extend .solid;
+  background: $input-color;
+  @include border-radius($border-radius)
+  cursor: pointer;
+  @include transition(background 0.3s ease-in-out);
+}
+.lg-btn.grn {
+  @include linear-gradient(150deg,$green,$dark-grey);
+}
+.lg-btn.blue {
+  @include linear-gradient(150deg,$blue,$dark-grey);
+}
+.lg-btn.rd {
+  @include linear-gradient(150deg,$red,$dark-grey);
+}

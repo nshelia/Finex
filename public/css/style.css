@@ -1,20 +1,8 @@
 @font-face {
 	font-family: 'Raleway';
-	src: url('../css/RisingSun-Light.otf') format('opentype');
+	src: url('../fonts/RisingSun-Light.otf') format('opentype');
 }
 
-.cont {
-	padding: 30px;
-}
-.cont-sw {
-	padding: 20px;
-}
-.cont-s {
-	padding: 30px 20px;
-}
-.center {
-	text-align: center !important;
-}
 .ready {
 	font-size:30px;
 }
@@ -56,86 +44,4 @@
 .checks p {
 	text-align: center;
 	font-size: 14px;
-}
-.lg.search {
-	text-align: center;
-}
-input:disabled {
-	opacity:0.7;
-}
-.todo:last-child {
-	margin-bottom: 0px;
-}
-.todo {
-	position: relative;
-	padding: 1rem 1rem 0.5rem 1rem;
-	margin-bottom: 10px;
-}
-.todo-complete,.todo-delete {
-	position: absolute;
-	height: 12px;
-	width: 12px;
-	cursor: pointer;
-}
-
-.todo .todo-delete {
-	background: url('cross.svg') no-repeat;
-	background-size: 12px 12px;
-	top: 10px;
-	right: 10px;
-}
-.todo .todo-complete {
-	background: url('tick.svg') no-repeat;
-	background-size: 12px 12px;
-	right: 10px;
-	bottom: 10px;
-}
-.todo.completed {
-	background: #0c0c0c;
-	border-radius: 3px;
-}
-.todo-delete:active,.todo-complete:active {
-	opacity: 0.5;
-}
-.todo .todo-text {
-	display: block;
-	word-wrap: break-word;
-	padding-right: 15px;
-	font-size: 18px;
-}
-.todo .todo-time {
-	display: block;
-	opacity: 0.8;
-	margin-top: 15px;
-	font-size: 12px;
-}
-.message {
-	font-size: 22px;
-	display: block;
-}
-.add-form {
-	border-bottom: 1px solid #333;
-}
-.todo-list {
-	display: inline-block;
-	width: 100%;
-}
-.profile-tool {
-	display: inline-block;
-	margin-bottom: 10px;
-}
-.profile-tool a {
-	margin-left: 5px;
-	color: #333;
-}
-label  {
-	display: block;
-	padding:1rem 0rem;
-}
-label input[type=checkbox] {
-	width: 15px;
-	height: 15px;
-}
-label span {
-	margin-left: 5px;
 }

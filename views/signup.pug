@@ -1,32 +1,34 @@
-extends layout
+head
+	include layout
+	link(rel='stylesheet' type='text/css' href='../css/main.css')
+head
+body
+	.wrapper
+		.row
+			.column-12
+				h3.home-stage.noselect finex
+		.row
+			.column-12.wd.bck.cont
+				form.dse
+					.row
+						.column-6
+							input(type="text" name="firstname" placeholder="Firstname" class="lg" autocomplete="off")
+						.column-6
+							input(type="text" name="lastname" placeholder="Lastname" class="lg" autocomplete="off")
+					.column-12
+						input(type="text" name="username" placeholder="Username" class="lg" autocomplete="off")
+					.column-12
+						input(type="password" name="password" placeholder="Password" class="lg")
+					.column-12
+						input(type="submit" value="Create account" class="lg-btn blue")
+		.row.checks
+			.column-12.wd.bck
+					.column-12
+						.cont
+							p Have an account? 
+								a(href="/").tolink.mkbl#rst Log in				
 block content
-	body
-		.wrapper
-			.row
-				.column-12
-					h3.home-stage.noselect finex
-			.row
-				.column-12.wd.bck.cont
-					form.dse
-						.row
-							.column-6
-								input(type="text" name="firstname" placeholder="Firstname" class="lg" autocomplete="off")
-							.column-6
-								input(type="text" name="lastname" placeholder="Lastname" class="lg" autocomplete="off")
-						.column-12
-							input(type="text" name="username" placeholder="Username" class="lg" autocomplete="off")
-						.column-12
-							input(type="password" name="password" placeholder="Password" class="lg")
-						.column-12
-							input(type="submit" value="Create account" class="lg-btn blue")
-			.row.checks
-				.column-12.wd.bck
-						.column-12
-							.cont
-								p Have an account? 
-									a(href="/").tolink.mkbl#rst Log in				
-	block content
-	include scripts
-	script(src="/dist/signup.bundle.min.js")
+include scripts
+script(src="/dist/signup.bundle.min.js")
 			
 										

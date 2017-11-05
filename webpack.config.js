@@ -26,7 +26,11 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/
          	},
             {
-                test: /\.(png|jpg)$/,
+                test: /\.scss$/,
+                loader: 'style-loader!css-loader!sass-loader'
+            },  
+            {
+                test: /\.(png|jpg|svg)$/,
                 loader: 'url-loader?limit=10000'
             }
      	]	

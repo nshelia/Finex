@@ -18,7 +18,7 @@ var AddTodo = createClass({
 	},
 	render: function() {
 		return (
-			<div className="cont-s add-form">
+			<div className="cont add-form">
 				<form onSubmit={this.onSubmit}>
 					<input type="text" ref="todo" className="lg" placeholder="Type some text "/>
 					<input type="submit" className="lg-btn blue" value="Add todo"/>

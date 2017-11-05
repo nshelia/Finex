@@ -30,7 +30,7 @@ var TodoList = createClass({
 			})
 		}
 		return (
-			<div className="todo-list cont-s">
+			<div className="todo-list cont">
 				{renderTodos()}
 			</div>
 		)

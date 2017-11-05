@@ -1,23 +1,24 @@
-extends layout
+head
+	include layout
+	link(rel='stylesheet' type='text/css' href='../css/main.css')
+head
+body
+	.errwrapper(style="max-width:950px; margin:0 auto")
+		.row
+			.column-12
+				h3.home-stage.noselect finex
+		.row
+			.column-12.wd.bck
+				.cont
+					.column-12.center
+						h1.ready.mkbl= message
+					.column-12.center
+						h4.ready-sub= error.status
 
-block content
-	body
-		.errwrapper(style="max-width:950px; margin:0 auto")
-			.row
-				.column-12
-					h3.home-stage.noselect finex
-			.row
-				.column-12.wd.bck
-					.cont
-						.column-12.center
-							h1.ready.mkbl= message
-						.column-12.center
-							h4.ready-sub= error.status
-
-		.err-stack(style="max-width:950px; margin:10px auto")
-				.column-12.wd.bck
-					.cont
-						pre #{error.stack}
+	.err-stack(style="max-width:950px; margin:10px auto")
+			.column-12.wd.bck
+				.cont
+					pre #{error.stack}
 
 				
 
