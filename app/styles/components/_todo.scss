@@ -46,6 +46,10 @@
 	background: $background-color;
 	@include border-radius(3px);
 }
+.todo.completed .todo-text {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
 .todo-delete:active,.todo-complete:active {
 	opacity: 0.5;
 }
